@@ -9,13 +9,7 @@ import {Todo} from './todo';
       color: grey;
     }`
   ],
-  template: `
-    <ul class="list-unstyled">
-      <li *ngFor="#todo of todos">
-        <input type="checkbox" [(ngModel)]="todo.done">
-        <span class="done-{{todo.done}}">{{todo.text}}</span>
-      </li>
-    </ul>`
+  templateUrl: 'app/templates/todo_lists.html'
 })
 export class TodoList {
   @Input() todos: Todo[];
